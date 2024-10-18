@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie-edge">
+        <title>Online Lessons Website</title>
+        <meta name="description" content="Edu-Online sample website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="login.css">
+    </head>
+
+    <body>
+      <header class="global-header" id="top-nav">
+        <section class="nav-left">
+            <div class="logo">
+                <img src="https://www.freeiconspng.com/uploads/laptop-png-23.png" width="50" alt="logo" />
+                <span><a class="logo" href="#">Edu-Online</a></span>
+            </div>
+              <ul class="nav">
+                <li id="menu-1-button">Subjects</li>
+                <li id="menu-2-button">Packages</li>
+                <li id="menu-3-button">Contact Us</li>
+              </ul>
+        </section>
+
+            <div class="nav-right">
+                <div class="hamburger-menu" id="menu-trigger">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/hamburger.svg" alt="Hamburger icon">
+                </div>
+            </div>
+      </header>
+
+      <!--Side Menu-->
+      <aside class="side-menu-position side-menu-design" id="side-menu">
+        <header class="side-menu-header">
+            <img src="https://www.freeiconspng.com/uploads/laptop-png-23.png" width="50" alt="logo">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="close this menu" id="menu-close">
+        </header>
+
+        <ul class="side-menu-content">
+            <li>Subjects</li>
+            <li>Packages</li>
+            <li>Contact Us</li>
+        </ul>
+      </aside>
+
+      <!--Drop down menus-->
+      <aside class="dropdown-menu" id="menu-1">
+        <h2 class="menu-header">Subjects</h2>
+        <ul class="menu-item-list">
+            <li><a href="#">Maths Online</a></li>
+            <li><a href="#">English Online</a></li>
+        </ul>
+      </aside>
+
+      <aside class="dropdown-menu" id="menu-2">
+        <h2 class="menu-header">Packages</h2>
+        <ul class="menu-item-list">
+            <li><a href="#">10 Lessons</a></li>
+            <li><a href="#">Monthly Unlimited</a></li>
+            <li><a href="#">Weekly</a></li>
+        </ul>
+      </aside>
+      
+      <aside class="dropdown-menu" id="menu-3">
+        <h2 class="menu-header">Contact Us</h2>
+        <ul class="menu-item-list">
+            <li><a href="#">Email:info@eduoline.com.au</a></li>
+            <li><a href="#">Ph:0123456789</a></li>
+        </ul>
+      </aside>
+
+      <!--Login section-->
+      <section id="login"  class="login-section">
+        <div class="login-container">
+         <!--  <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > -->
+            <form class="login-form" id="login">
+                <fieldset>
+                  <legend translate="login">Login</legend>
+                    <p class="before-fill" style="font-size: 15px;">Fields marked with an * are required</p>
+                        <div class="account-fields">
+                          <div class="email-error-container"></div>
+                           <label for="Email">Email</label>
+                           <input type="text" id="email" placeholder="*Email">
+                        </div>
+                        <div class="account-fields"> 
+                          <div class="password-error-container"></div>
+                           <label for="Password">Password</label>
+                           <input type="text" id="password" placeholder="*Password">
+                        </div>
+                        <div class="account-fields">
+                        <input class="login-button" type="submit" Value="Login">  
+                        </div> 
+                        <div class="account-fields"> 
+                            <label for="LoginIsPersistent" class="checkbox-inline">
+                                <input type="checkbox" class="checkbox-inline" id="LoginIsPersistent">Stay Logged In
+                            </label>  
+                        </div>
+                        <div class="account-fields">
+                            <a class="Forgot" href="#">Forgot Password</a>
+                        </div>
+
+                    <div class="account-fields">
+                    <legend style="text-align: center;" translate="NewUser">Don't have an account?</legend>
+                    <button class="new-account-button">Create My Account</button>
+                    </div>
+                </fieldset>
+             </form>
+         <!-- </div>-->
+        </div>
+
+      <footer class="copyright-footer">
+        <hr>
+        <div class="copyright">© EduOnline, Inc.</div>
+      </footer>
+      <script src="login.js"></script>
+    </body>
+</html>

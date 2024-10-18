@@ -1,0 +1,348 @@
+body {
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    box-sizing: border-box;
+}
+
+.global-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    height: 40px;
+    padding: 15px 25px;
+    width: calc(100% - 50px);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.nav li {
+    font-size: 14px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.nav-right  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 45px;
+}
+
+.dropdown-menu {
+    background-color: white;
+    box-shadow: 0 0 2rem rgba(0,0,0,.1);
+    display: none;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    width: 210px;
+    z-index: 10;  
+}
+
+.dropdown-menu#menu-1 {
+    left: 190px;
+}
+  
+.dropdown-menu#menu-2 {
+    left: 290px;
+    min-width: 200px;
+}
+  
+.dropdown-menu#menu-3 {
+    left: 390px;
+    min-width: 200px;
+}
+
+.menu-header {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 10px 8px 10px;
+    text-transform: uppercase;  
+}
+
+.menu-item-list {
+    margin: 0;
+    padding: 0;
+}
+ 
+.menu-item-list li a,
+.menu-item-list li a:visited,
+.menu-item-list li a:focus {
+    color: #454545;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-item-list li a:hover {
+    background-color: rgb(242,242,242);
+    color: #1264a3;
+}
+
+#fade-in-header {
+    display: none;
+    position: fixed;
+    top: 0;
+}
+  
+#top-nav {
+    position: fixed;
+}
+  
+.show {
+    display: block;
+}
+  
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+.side-menu-position {
+    padding-top: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+  
+.side-menu-design {
+    background-color: #611f69;
+    background-image: url('https://wallpapers.com/images/hd/blackboard-background-902-x-1603-hl42wztt9qa12lf1.jpg');
+    background-size: 1300px 700px;
+    background-repeat: repeat;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+}
+  
+.side-menu-header {
+    border-bottom: 1px solid rgba(255,255,255,.1); 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px 25px 25px;  
+}
+  
+.side-menu-content {
+    color: #fff;
+    font-size: 24px; 
+    margin: 25px;
+    padding-left: 0; 
+}
+  
+.side-menu-content li {
+    list-style: none;
+    margin-bottom: 25px;
+}
+  
+.side-menu-login {
+    margin-bottom: 8px;
+    text-align: center;
+}
+  
+#top-nav {
+    position: fixed;
+}
+  
+.show-menu {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.login-section {
+    width: 100%;
+    padding-top: 70px;
+
+}
+
+.login-container {
+    display: flex;
+    flex: 100%;
+    padding-top: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 15px 20px 15px;
+    background-color:rgb(236, 226, 168);
+    border: 2px solid rgb(167, 239, 146);
+}
+
+@media(min-width: 768px) {
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+fieldset {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@media(min-width: 768px) {
+    fieldset {
+     max-width: fit-content;
+    }
+}
+
+legend {
+    padding: 25px 0 5px 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 21px;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+.login-form {
+ 
+
+    padding: 25px;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .login-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 100%;
+    }
+}
+
+.account-fields {
+    margin-bottom: 15px;
+}
+
+label {
+
+    text-align: left;
+    padding-bottom: 4px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin: auto;
+    height: 25px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    input[type="text"] {
+        width: 300px;
+        height: 25px;
+    }
+}
+
+.login-button, .new-account-button {
+    background-color: #1a3fd8;
+    border: solid 1px #1a3fd8;
+    color: #fff;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    border-radius: .2em;
+    text-decoration: none;
+    transition:.5s cubic-bezier(.33,.66,.66,1);
+}
+
+.checkbox-inline input[type=checkbox] {
+  cursor: pointer;  
+  position: relative;
+  margin-left: -20px;
+  margin: 4px 0 0;
+}
+
+
+a .forgot {
+
+    font-weight: 400;
+    color: #1a3fd8;
+    text-decoration: none;
+    position: relative;
+}
+
+.email-error-container,.password-error-container {
+    color: #f2545b;
+}
+  
+.copyright-footer {
+    align-items: center;
+    background-color: rgba(235, 217, 78, 0.6);
+    border: 2px solid rgb(167, 239, 146);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+}
+  
+hr {
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    width: 95%;
+}
