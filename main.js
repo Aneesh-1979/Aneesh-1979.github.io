@@ -83,4 +83,12 @@ myForm.addEventListener('submit', function (event) {
         errorContainer.textContent = 'The phone number must be 10 digits!'
       } 
 })
+/*pop up*/
+let popup = document. getElementById("popup");
 
+function openPopup() {
+  popup.classList.add("open-popup")
+}
+function closePopup() {
+  popup.classList.remove("open-popup")
+}

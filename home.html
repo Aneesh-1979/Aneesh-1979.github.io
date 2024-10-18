@@ -139,7 +139,13 @@
                 </fieldset>
 
                 <fieldset>
-                    <input type="submit" Value="Enquire Now">
+                    <input type="submit" onclick="openPopup()" Value="Enquire Now">
+                    <div class="popup" id="popup">
+                      <img src="https://th.bing.com/th/id/OIP.xLV6Oj6sew0U4leCihAiLwHaHa?pid=ImgDet&w=208&h=208&c=7&dpr=1.5"/>
+                      <h2>Thank You!</h2>
+                      <p>Your details has been successfully submitted. Thanks!</p>
+                      <button type="button" onclick="closePopup()">OK</button>
+                    </div>
                 </fieldset>
             </form>
 
