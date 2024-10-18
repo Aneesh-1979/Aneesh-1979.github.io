@@ -16,7 +16,7 @@
         <section class="nav-left">
             <div class="logo">
                 <img src="https://www.freeiconspng.com/uploads/laptop-png-23.png" width="50" alt="logo" />
-                <span><a class="logo" href="#">Edu-Online</a></span>
+                <span><a class="logo" href="https://aneesh-1979.github.io/home.html">Edu-Online</a></span>
             </div>
               <ul class="nav">
                 <li id="menu-1-button">Subjects</li>
@@ -130,7 +130,13 @@
                 </fieldset>
 
                 <fieldset>
-                    <input type="submit" Value="Enquire Now">
+                    <input type="submit" onclick="openPopup()" Value="Enquire Now">
+                    <div class="popup" id="popup">
+                      <img src="https://th.bing.com/th/id/OIP.xLV6Oj6sew0U4leCihAiLwHaHa?pid=ImgDet&w=208&h=208&c=7&dpr=1.5"/>
+                      <h2>Thank You!</h2>
+                      <p>Your details has been successfully submitted. Thanks!</p>
+                      <button type="button" onclick="closePopup()">OK</button>
+                    </div>
                 </fieldset>
             </form>
 
