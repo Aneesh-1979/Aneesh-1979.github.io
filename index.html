@@ -16,7 +16,7 @@
         <section class="nav-left">
             <div class="logo">
                 <img src="https://www.freeiconspng.com/uploads/laptop-png-23.png" width="50" alt="logo" />
-                <span><a class="logo" href="https://aneesh-1979.github.io/home.html" >Edu-Online</a></span>
+                <span><a class="logo" href="https://aneesh-1979.github.io/index.html" >Edu-Online</a></span>
             </div>
               <ul class="nav">
                 <li id="menu-1-button">Subjects</li>
@@ -69,8 +69,8 @@
       <aside class="dropdown-menu" id="menu-3">
         <h2 class="menu-header">Contact Us</h2>
         <ul class="menu-item-list">
-            <li><a href="">Email:info@eduoline.com.au</a></li>
-            <li><a href="#">Ph:0123456789</a></li>
+            <li><a href="mailto:info@eduoline.com.au">Email:info@eduoline.com.au</a></li>
+            <li><a href="tel:0123456789">Ph:0123456789</a></li>
         </ul>
       </aside>
 
@@ -82,7 +82,7 @@
                     <p>Don't Miss Out While You Are Away From School!</p>
                     <div class="welcome-button">
                       <div class="welcome-button-1">
-                      <a class="welcome-button-text" href="#">Book a Trial Lesson</a>
+                      <a class="welcome-button-text" href="https://aneesh-1979.github.io/booking.html">Book a Trial Lesson</a>
                       </div>
                       <div class="welcome-button-2">
                       <a class="welcome-button-text" href="https://aneesh-1979.github.io/packages.html">See Packages</a>
@@ -113,9 +113,9 @@
 
       <!--Footer section-->
       <section class="footer-section">
-            <form class="form" id="contact-form">
+            <form class="form" id="contact-form" onsubmit="return check();">
                 <fieldset>
-                  <legend>Book Your Sessions Now!</legend>
+                  <legend>Submit Your Enquiries Now!</legend>
                     <p class="before-fill" style="font-size: 15px;">Fields marked with an * are required</p>
                     <div class="form-row">
                         <div class="name-fields">
@@ -137,18 +137,16 @@
                         <textarea name="textarea" id="message" placeholder="Message"></textarea>
                     </div>
                 </fieldset>
-
                 <fieldset>
-                    <input type="submit" onclick="openPopup()" Value="Enquire Now">
+                    <input type="submit" Value="Enquire Now">
+                </fieldset>
+            </form>
                     <div class="popup" id="popup">
                       <img src="https://th.bing.com/th/id/OIP.xLV6Oj6sew0U4leCihAiLwHaHa?pid=ImgDet&w=208&h=208&c=7&dpr=1.5"/>
                       <h2>Thank You!</h2>
-                      <p>Your details has been successfully submitted. Thanks!</p>
+                      <p>Your enquiry has been successfully submitted. Thanks!</p>
                       <button type="button" onclick="closePopup()">OK</button>
                     </div>
-                </fieldset>
-            </form>
-
             <div class="footer-nav-container">
                 <div class="footer-nav-content-box">
                   <ul class="footer-nav-content">
@@ -177,7 +175,7 @@
 
       <footer class="copyright-footer">
         <hr>
-        <div class="copyright">© EduOnline, Inc.</div>
+        <div class="copyright">©2024 EduOnline, Inc.</div>
       </footer>
       <script src="main.js"></script>
     </body>

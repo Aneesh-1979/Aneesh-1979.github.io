@@ -41,54 +41,61 @@ function sideMenuDisappears() {
     document.getElementById('side-menu').classList.remove('show-menu');
 }
 
-// form error check//
-
+// Form validation and popup
 let myForm = document.querySelector('#contact-form');
 myForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    let firstNameInput = document.querySelector('#firstname');
-    let firstNameText = firstNameInput.value;
+    event.preventDefault(); // Prevent default form submission
+    const errors = {};
 
-    if (firstNameText.length === 0) {
-      let errorContainer = document.querySelector('.firstname-error-container')
-      errorContainer.textContent = 'The first name must not be empty!'
+    // Validate first name
+    const firstname = document.getElementById('firstname').value.trim();
+    if (!firstname) {
+        errors.firstname = 'The first name must not be empty!';
     }
 
-    let lastNameInput = document.querySelector('#lastname');
-    let lastNameText = lastNameInput.value;
-
-    if (lastNameText.length === 0) {
-      let errorContainer = document.querySelector('.lastname-error-container')
-      errorContainer.textContent = 'The last name must not be empty!'
+    // Validate last name
+    const lastname = document.getElementById('lastname').value.trim();
+    if (!lastname) {
+        errors.lastname = 'The last name must not be empty!';
     }
 
-    let emailInput = document.querySelector('#email');
-    let emailText = emailInput.value;
-
-    if (emailText.length === 0) {
-      let errorContainer = document.querySelector('.email-error-container')
-      errorContainer.textContent = 'The email must not be empty!'
+    // Validate email
+    const email = document.getElementById('email').value.trim();
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email) {
+        errors.email = 'The email must not be empty!';
+    } else if (!email.match(emailPattern)) {
+        errors.email = 'Please enter a valid email address.';
     }
 
-    let phoneInput = document.querySelector('#phone');
-    let phoneTel = phoneInput.value;
+    // Validate phone number
+    const phone = document.getElementById('phone').value.trim();
+    const phonePattern = /^\d{10}$/; // Adjusted for 10-digit US numbers
+    if (!phone) {
+        errors.phone = 'The phone number must not be empty!';
+    } else if (!phone.match(phonePattern)) {
+        errors.phone = 'Please enter a valid phone number in the format 1234567890.';
+    }
 
-    if (phoneTel.length === 0) {
-      let errorContainer = document.querySelector('.phone-error-container')
-      errorContainer.textContent = 'The phone number must not be empty!'
-    }    
+    // Display errors
+    document.querySelector('.firstname-error-container').textContent = errors.firstname || '';
+    document.querySelector('.lastname-error-container').textContent = errors.lastname || '';
+    document.querySelector('.email-error-container').textContent = errors.email || '';
+    document.querySelector('.phone-error-container').textContent = errors.phone || '';
 
-    else if (phoneTel.length !== 10) {
-        let errorContainer = document.querySelector('.phone-error-container')
-        errorContainer.textContent = 'The phone number must be 10 digits!'
-      } 
-})
-/*pop up*/
-let popup = document. getElementById("popup");
+    // If no errors, show the popup
+    if (Object.keys(errors).length === 0) {
+        showPopup();
+    }
+});
 
-function openPopup() {
-  popup.classList.add("open-popup")
+// Popup functions
+function showPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block'; // Show the popup
 }
+
 function closePopup() {
-  popup.classList.remove("open-popup")
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none'; // Hide the popup
 }

@@ -67,28 +67,27 @@
       <aside class="dropdown-menu" id="menu-3">
         <h2 class="menu-header">Contact Us</h2>
         <ul class="menu-item-list">
-            <li><a href="#">Email:info@eduoline.com.au</a></li>
-            <li><a href="#">Ph:0123456789</a></li>
+            <li><a href="mailto:info@eduoline.com.au">Email:info@eduoline.com.au</a></li>
+            <li><a href="tel:0123456789">Ph:0123456789</a></li>
         </ul>
       </aside>
 
       <!--Login section-->
       <section id="login"  class="login-section">
         <div class="login-container">
-         <!--  <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" > -->
             <form class="login-form" id="login">
                 <fieldset>
                   <legend translate="login">Login</legend>
-                    <p class="before-fill" style="font-size: 15px;">Fields marked with an * are required</p>
+                    <p class="before-fill" style="font-size:15px;padding:5px;text-align: center;">Fields marked with an * are required</p>
                         <div class="account-fields">
                           <div class="email-error-container"></div>
                            <label for="Email">Email</label>
-                           <input type="text" id="email" placeholder="*Email">
+                           <input type="email" id="email" placeholder="*Email">
                         </div>
                         <div class="account-fields"> 
                           <div class="password-error-container"></div>
                            <label for="Password">Password</label>
-                           <input type="text" id="password" placeholder="*Password">
+                           <input type="password" id="password" placeholder="*Password">
                         </div>
                         <div class="account-fields">
                         <input class="login-button" type="submit" Value="Login">  
@@ -101,19 +100,17 @@
                         <div class="account-fields">
                             <a class="Forgot" href="#">Forgot Password</a>
                         </div>
-
-                    <div class="account-fields">
-                    <legend style="text-align: center;" translate="NewUser">Don't have an account?</legend>
-                    <button class="new-account-button">Create My Account</button>
-                    </div>
-                </fieldset>
-             </form>
-         <!-- </div>-->
+                    </fieldset>
+                </form>
+                        <div class="newuser-fields">
+                        <legend style="text-align: center;" translate="NewUser">Don't have an account?</legend>
+                        <button type="button" class="new-account-button">Create My Account</button>
+                        </div>
         </div>
-
+      </section>
       <footer class="copyright-footer">
         <hr>
-        <div class="copyright">© EduOnline, Inc.</div>
+        <div class="copyright">©2024 EduOnline, Inc.</div>
       </footer>
       <script src="login.js"></script>
     </body>

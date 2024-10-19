@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie-edge">
+        <title>Online Lessons Booking</title>
+        <meta name="description" content="Edu-Online Booking website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="booking.css">
+    </head>
+
+    <body>
+      <header class="global-header" id="top-nav">
+        <section class="nav-left">
+            <div class="logo">
+                <img src="https://www.freeiconspng.com/uploads/laptop-png-23.png" width="50" alt="logo" />
+                <span><a class="logo" href="https://aneesh-1979.github.io/index.html">Edu-Online</a></span>
+            </div>
+              <ul class="nav">
+                <li id="menu-1-button">Subjects</li>
+                <li id="menu-2-button">Packages</li>
+                <li id="menu-3-button">Contact Us</li>
+              </ul>
+        </section>
+
+            <div class="nav-right">
+                <a href="https://aneesh-1979.github.io/login.html" class="signup-login">Sign Up/Login</a>
+                <div class="hamburger-menu" id="menu-trigger">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/hamburger.svg" alt="Hamburger icon">
+                </div>
+            </div>
+      </header>
+
+      <!--Side Menu-->
+      <aside class="side-menu-position side-menu-design" id="side-menu">
+        <header class="side-menu-header">
+            <img src="https://www.freeiconspng.com/uploads/laptop-png-23.png" width="50" alt="logo">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="close this menu" id="menu-close">
+        </header>
+
+        <ul class="side-menu-content">
+            <li>Subjects</li>
+            <li>Packages</li>
+            <li>Contact Us</li>
+            <li>Sign up/Login</li>
+        </ul>
+      </aside>
+
+      <!--Drop down menus-->
+      <aside class="dropdown-menu" id="menu-1">
+        <h2 class="menu-header">Subjects</h2>
+        <ul class="menu-item-list">
+            <li><a href="#">Maths Online</a></li>
+            <li><a href="#">English Online</a></li>
+        </ul>
+      </aside>
+
+      <aside class="dropdown-menu" id="menu-2">
+        <h2 class="menu-header">Packages</h2>
+        <ul class="menu-item-list">
+            <li><a href="#">10 Lessons</a></li>
+            <li><a href="#">Monthly Unlimited</a></li>
+            <li><a href="#">Weekly</a></li>
+        </ul>
+      </aside>
+      
+      <aside class="dropdown-menu" id="menu-3">
+        <h2 class="menu-header">Contact Us</h2>
+        <ul class="menu-item-list">
+          <li><a href="mailto:info@eduoline.com.au">Email:info@eduoline.com.au</a></li>
+          <li><a href="tel:0123456789">Ph:0123456789</a></li>
+        </ul>
+      </aside>
+
+      <!--Footer section-->
+      <section class="footer-section">
+            <form class="form" id="contact-form" onsubmit="return check();">
+                <fieldset>
+                  <legend>Book Your Sessions Now!</legend>
+                    <p class="before-fill" style="font-size: 15px;">Fields marked with an * are required</p>
+                    <div class="form-row">
+                        <div class="name-fields">
+                          <div class="firstname-error-container"></div>
+                           <label style="visibility: hidden;" for="First Name">First Name</label>
+                           <input type="text" id="firstname" placeholder="*First Name">
+                          <div class="lastname-error-container"></div>
+                           <label style="visibility: hidden;" for="Last Name">Last Name</label>
+                           <input type="text" id="lastname" placeholder="*Last Name">
+                        </div>
+                        <div class="contact-fields">
+                          <div class="email-error-container"></div>
+                            <label style="visibility: hidden;" for="Email Address">Email</label>
+                            <input type="text" id="email" placeholder="*Email">
+                          <div class="phone-error-container"></div>
+                            <label style="visibility: hidden;" for="Phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="*123-456-7890" minlength="10" maxlength="10">
+                        </div>
+                        <label for="select" style="visibility: hidden;">Select List</label>
+                        <select id="select">
+                          <option value>Choose</option>
+                          <optgroup label="Subjects">
+                            <option value>Maths</option>
+                            <option value>English</option>
+                            <option value>Both</option>
+                          </optgroup>
+                        </select>
+                      <div class="date-fields">
+                        <div></div>
+                          <label style="visibility: hidden;" for="Date">Email</label>
+                          <input type="date" id="date" placeholder="*dd/mm/yyyy">
+                        <div></div>
+                          <label style="visibility: hidden;" for="Time">Time</label>
+                          <input type="time" id="time" placeholder="*00:00" >
+                      </div>
+                        <textarea name="textarea" id="message" placeholder="Message"></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <input type="submit" Value="Book Now">
+                </fieldset>
+            </form>
+            <div class="popup" id="popup">
+              <img src="https://th.bing.com/th/id/OIP.xLV6Oj6sew0U4leCihAiLwHaHa?pid=ImgDet&w=208&h=208&c=7&dpr=1.5"/>
+              <h2>Thank You!</h2>
+              <p>Your details has been successfully submitted. Thanks!</p>
+              <button type="button" onclick="closePopup()">OK</button>
+            </div>
+      </section>
+
+      <footer class="copyright-footer">
+        <hr>
+        <div class="copyright">©2024 EduOnline, Inc.</div>
+      </footer>
+      <script src="booking.js"></script>
+    </body>
+</html>

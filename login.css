@@ -220,7 +220,7 @@ ul {
 
 fieldset {
 
-    margin: 0;
+    margin: auto;
     padding: 0;
     border: 0;
 }
@@ -232,11 +232,12 @@ fieldset {
 }
 
 legend {
-    padding: 25px 0 5px 0;
+    padding: 5px 0 ;
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    margin: auto;
     font-size: 21px;
+    text-align: center;
     color: #333;
     border: 0;
     border-bottom: 1px solid #e5e5e5;
@@ -244,9 +245,8 @@ legend {
 }
 
 .login-form {
- 
 
-    padding: 25px;
+    padding: 40px;
     display: flex;
     margin: 0;
     flex-direction: column;
@@ -269,17 +269,20 @@ legend {
 
 label {
 
-    text-align: left;
+    text-align: center;
     padding-bottom: 4px;
-    display: inline-block;
+    display: block;
+    position: relative ;
     margin-bottom: 5px;
+    text-align: left;
 }
 
-input[type="text"] {
+input {
     display: flex;
-    width: fit-content;
+    width: 250px;
     justify-content: center;
-    margin: auto;
+    align-items: center;
+    margin: 0;
     height: 25px;
     padding: 6px 12px;
     font-size: 14px;
@@ -288,17 +291,19 @@ input[type="text"] {
 }
 
 @media (min-width: 768px) {
-    input[type="text"] {
+    input {
         width: 300px;
         height: 25px;
     }
 }
 
-.login-button, .new-account-button {
+.login-button {
     background-color: #1a3fd8;
     border: solid 1px #1a3fd8;
     color: #fff;
-    padding: 10px 25px;
+    padding: 0;
+    width: 100px;
+    height: 30px;
     text-align: center;
     text-transform: uppercase;
     margin: auto;
@@ -310,13 +315,37 @@ input[type="text"] {
     transition:.5s cubic-bezier(.33,.66,.66,1);
 }
 
-.checkbox-inline input[type=checkbox] {
-  cursor: pointer;  
-  position: relative;
-  margin-left: -20px;
-  margin: 4px 0 0;
+button {
+    background-color: #1a3fd8;
+    border: solid 1px #1a3fd8;
+    color: #fff;
+    padding: 6px 5px 10px 5px;
+    width: auto;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    border-radius: .2em;
+    text-decoration: none;
+    transition:.5s cubic-bezier(.33,.66,.66,1);
 }
 
+.checkbox-inline {
+    display: inline-block;
+    width: auto;
+    height: 15px;
+    padding-right: 4px;
+    align-items: center;
+    margin: 5px 10px 0px 0px ;
+}
+
+label #text {
+    padding: 5px;
+    margin: auto;
+}
 
 a .forgot {
 
